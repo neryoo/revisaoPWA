@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+
+
+    <title>REVISÃO PWA</title>
+
+    <style>
+        body{
+            background-image: url(images/1731156267672f592b0a055_1731156267_3x2_rt.jpg);
+            background-size: cover;
+        }
+
+        h1{
+            color: black;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Arcane</h1>
+    
+    
+    <script>
+        if("serviceworker" in navigator){
+            navigator.serviceWorker.register("sw.js")
+            .then(() => console.log("Service worker registrado com sucesso!"))
+            .catch(err => console.error("Erro ao register Service Worker: " + err));
+        }else{
+            console.log("Navegador não suporta Service Worker");
+        }
+    </script>
+
+
+
+</body>
+</html>
