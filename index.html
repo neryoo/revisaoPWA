@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="manifest" href="manifest.json">
 
-
     <title>REVISÃO PWA</title>
 
     <style>
@@ -14,8 +13,9 @@
             background-size: cover;
         }
 
-        h1{
-            color: black;
+        h1, a{
+            color: #FFFFFF;
+            
         }
 
     </style>
@@ -25,18 +25,13 @@
 
     <h1>Arcane</h1>
     
+    <nav>
+        <a href="/revisaoPWA/index.html"></a>
+        <a href="/revisaoPWA/about.html"></a>
+    </nav>
     
-    <script>
-        if("serviceworker" in navigator){
-            navigator.serviceWorker.register("sw.js")
-            .then(() => console.log("Service worker registrado com sucesso!"))
-            .catch(err => console.error("Erro ao register Service Worker: " + err));
-        }else{
-            console.log("Navegador não suporta Service Worker");
-        }
-    </script>
 
 
-
+    <script src="app.js"></script>
 </body>
 </html>
